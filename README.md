@@ -1,7 +1,7 @@
 ## Filepp 社区免费版本功能介绍
 
  1. 内置自动做Addpiece数据添加，可自由控制添加间隔时间
- 2. 跳过AP阶段，直接从P1开始，节省AP时间（需要关闭miner接单）
+ 2. 跳过AP阶段，直接从P1开始，节省AP时间
  3. 支持ap p1 p2绑定在一台机子上工作
  4. 可以自定义每个worker ap p1 p2 c2 工作数量，可以自定义限制每个worker unsealed文件数量
  5. 存储机直接跑worker进程，自动实现均衡存储调度，不回传miner
@@ -44,7 +44,7 @@
 ```
 
 **不做AP配置**
-
+> 对于没有订单的扇区，unsealed文件完全相同，不需要做AP。否则，走官方逻辑。
 1. 批量在worker机上生成unsealed文件
 ```
 fallocate -l 34359738368 /root/unsealed

@@ -44,7 +44,7 @@
 ```
 
 **不做AP配置**
-> 对于没有订单的扇区，unsealed文件完全相同，不需要做AP。否则，续执行AP。
+> 对于没有订单的扇区，unsealed文件完全相同，不需要做AP。否则执行AP。
 1. 批量在worker机上生成unsealed文件
 ```
 fallocate -l 34359738368 /root/unsealed

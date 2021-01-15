@@ -44,6 +44,6 @@
 4. miner服务器安装NFS客户端，挂载worker存储目录 ：lotus-miner storage attach --store /NFS远程存储目录
 ```
 
-**不做AP配置**
+**不做AP无需任何配置**
 > 对于没有订单的扇区，unsealed文件完全相同，不需要做AP。否则执行AP。
 

@@ -46,13 +46,4 @@
 
 **不做AP配置**
 > 对于没有订单的扇区，unsealed文件完全相同，不需要做AP。否则执行AP。
-1. 批量在worker机上生成unsealed文件
-```
-fallocate -l 34359738368 /root/unsealed
-echo -e -n '\x04\x10\x10\x10\x10\x30\x06\x00\x00\x00' >> /root/unsealed
-```
-2. worker机子上加入环境变量
-```
-export RT_PIECE_CID=baga6ea4seaqao7s73y24kcutaosvacpdjgfe5pw76ooefnyqw4ynr3d2y6x2mpq
-export RT_UNSEALED_FILE=/root/unsealed
-```
+

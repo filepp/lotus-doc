@@ -38,7 +38,7 @@
 **存储机 worker 启动流程**（可选）
 
 ```
-1. lotus-worker --worker-repo=/lotus/worker run --no-local-storage
+1. lotus-worker --worker-repo=/lotus/worker0 run --no-local-storage --addpiece=false --precommit1=false --unseal=false --precommit2=false --commit=false 
 2. lotus-worker storage attach --init --store /存储目录
 3. 存储机安装NFS服务端（自行百度如何安装）
 4. miner服务器安装NFS客户端，挂载worker存储目录 ：lotus-miner storage attach --store /NFS远程存储目录

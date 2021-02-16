@@ -48,7 +48,7 @@
 > 对于没有订单的扇区，unsealed文件完全相同，软件自动判断不需要做AP，否则执行AP。
 
 
-**Window POST 分离设置 **
+**Window POST 分离设置**
 
 Window POST独立节点二进制文件为lotus-prover， 使用方法类似lotus-worker，通过以下命令启动
 ```

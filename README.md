@@ -47,3 +47,19 @@
 **不做AP无需任何配置**
 > 对于没有订单的扇区，unsealed文件完全相同，软件自动判断不需要做AP，否则执行AP。
 
+
+**Window POST 分离设置 **
+
+Window POST独立节点二进制文件为lotus-prover， 使用方法类似lotus-worker，通过以下命令启动
+```
+export LOTUS_PROVER_PATH=/lotus/lotusprover
+export MINER_API_INFO="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJBbGxvdyI6WyJyZWFkIiwid3JpdGUiLCJzaWduIiwiYWRtaW4iXX0.9TyrJzhX3FBVYxLUHoz-Nui5_v9pVpfPVJEVFLpcWeY:/ip4/127.0.0.1/tcp/2345/http"
+lotus-prover run
+```
+添加存储路径
+
+```
+lotus-prover storage attach /lotus/data
+
+```
+

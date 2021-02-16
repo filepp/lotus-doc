@@ -6,6 +6,7 @@
  4. 可以自定义每个worker ap p1 p2 c2 工作数量，可以自定义限制每个worker unsealed文件数量
  5. 存储机直接跑worker进程，自动实现均衡存储调度，不回传miner
  6. 支持强制移除任何状态扇区 lotus-miner sectors remove --really-do-it  XX
+ 7. window_post分离，提高爆块率
 
 **备注：社区版无算法优化，如需算法优化版本，可入群联系我们**
  

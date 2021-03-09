@@ -21,7 +21,7 @@
     AutoPledgeSectorInterval = 60  #多久自动添加一个addpiece，单位秒
 [Storage]
    UsePreWorkerP1P2 = true    #控制AP P1 P2合并
-   AllowFinalize = false      #存储机不回传miner
+   AllowStore = false     #存储机不回传miner
 ```
 
 
@@ -39,7 +39,7 @@
 **存储机 worker 启动流程**（可选）
 
 ```
-1. lotus-worker --worker-repo=/lotus/worker0 run --no-local-storage --addpiece=false --precommit1=false --unseal=false --precommit2=false --commit=false 
+1. lotus-worker --worker-repo=/lotus/worker0 run --no-local-storage --addpiece=false --precommit1=false --unseal=false --precommit2=false --commit=false --finalize=false 
 2. lotus-worker --worker-repo=/lotus/worker0 storage attach --init --store /存储目录
 3. 存储机安装NFS服务端（自行百度如何安装）
 4. miner服务器安装NFS客户端，挂载worker存储目录 ：lotus-miner storage attach --store /NFS远程存储目录
